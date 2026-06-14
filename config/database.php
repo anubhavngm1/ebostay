@@ -1,9 +1,9 @@
 <?php
 // Database Configuration
 $db_host = 'localhost';
-$db_name = 'ebostay_db';
-$db_user = 'root';
-$db_password = '';
+$db_name = 'u518420372_ebo_db';
+$db_user = 'u518420372_ebo';
+$db_password = 'Arunnig@1234';
 
 try {
     $conn = new mysqli($db_host, $db_user, $db_password, $db_name);
