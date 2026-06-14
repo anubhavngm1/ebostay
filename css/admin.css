@@ -1,0 +1,251 @@
+/* ===== ADMIN PANEL STYLES ===== */
+.admin-panel {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 80px);
+    background: #f5f7fa;
+}
+
+.admin-sidebar {
+    background: linear-gradient(180deg, #2D3436 0%, #1e2630 100%);
+    color: white;
+    padding: 2rem 0;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+}
+
+.admin-logo {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-nav-item {
+    padding: 1rem 1.5rem;
+    color: #bbb;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.admin-nav-item:hover,
+.admin-nav-item.active {
+    background: rgba(108, 99, 255, 0.2);
+    color: white;
+    border-left-color: #6C63FF;
+}
+
+.admin-nav-item.logout {
+    margin-top: auto;
+    color: #FF6B6B;
+}
+
+.admin-content {
+    padding: 2rem;
+}
+
+.admin-header {
+    margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.admin-header p {
+    color: #666;
+}
+
+/* ===== ADMIN STATS ===== */
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.stat-box i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-color);
+    border-radius: 10px;
+}
+
+.stat-box h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ===== ADMIN SECTION ===== */
+.admin-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+}
+
+/* ===== ADMIN TABLE ===== */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table thead {
+    background: var(--light-color);
+}
+
+.admin-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.admin-table td {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.admin-table tbody tr:hover {
+    background: var(--light-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===== AI FORM ===== */
+.ai-box {
+    background: linear-gradient(135deg, var(--light-color) 0%, #fff 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+}
+
+.ai-form {
+    margin-bottom: 2rem;
+}
+
+.ai-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.ai-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.ai-response {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.ai-response h3 {
+    margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .admin-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: relative;
+        top: 0;
+        display: flex;
+        gap: 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .admin-nav {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .admin-nav-item {
+        white-space: nowrap;
+        padding: 0.8rem 1rem;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .section-header .btn {
+        width: 100%;
+    }
+
+    .admin-table {
+        font-size: 0.9rem;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 0.7rem;
+    }
+}
